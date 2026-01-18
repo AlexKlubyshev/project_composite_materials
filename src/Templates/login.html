@@ -1,0 +1,27 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Страница авторизации</h1>
+        <form method="post">
+            <p>
+                <label>Имя пользователя</label> 
+                <input name="username">   
+            </p>
+            <p>
+                <label>Пароль</label> 
+                <input type="password" password="pusername">  
+            </p>
+            <p>
+                <input type="submit">
+            </p>
+            <p>
+                {% if message %}
+                {{ message }}
+                {% endif %}
+            </p>
+            
+        </form>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Прогноз</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                max-width: 600px;
+            }
+            td {
+                padding: 8px;
+                vertical-align: top;
+            }
+            td:first-child {
+                text-align: right;
+                width: 250px;
+                font-weight: bold;
+                padding-right: 15px;
+            }
+            input[type="text"], input[type="number"] {
+                width: 200px;
+                padding: 5px;
+            }
+            .submit-cell {
+                text-align: center;
+                padding-top: 20px;
+            }
+            .result {
+                text-align: center;
+                font-weight: bold;
+                color: #2c3e50;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Прогнозирование параметра "Прочность при растяжении"</h1>
+        <form method="post">
+            <table>
+                <tr>
+                    <td><label>Соотношение матрица-наполнитель</label></td>
+                    <td><input name="area" type="number" step="any"></td>
+                </tr>
+                <tr>
+                    <td><label>Плотность</label></td>
+                    <td><input name="density" type="number" step="any"></td>
+                </tr>
+                <tr>
+                    <td><label>Модуль упругости</label></td>
+                    <td><input name="modulus" type="number" step="any"></td>
+                </tr>
+                <tr>
+                    <td><label>Количество отвердителя</label></td>
+                    <td><input name="hardener" type="number" step="any"></td>
+                </tr>
+                <tr>
+                    <td><label>Содержание эпоксидных групп</label></td>
+                    <td><input name="epoxy" type="number" step="any"></td>
+                </tr>
+                <tr>
+                    <td><label>Поверхностная плотность</label></td>
+                    <td><input name="surf_density" type="number" step="any"></td>
+                </tr>
+                <tr>
+                    <td><label>Потребление смолы</label></td>
+                    <td><input name="resin" type="number" step="any"></td>
+                </tr>
+                <tr>
+                    <td><label>Угол нашивки</label></td>
+                    <td><input name="angle" type="number" step="any"></td>
+                </tr>
+                <tr>
+                    <td><label>Шаг нашивки</label></td>
+                    <td><input name="step" type="number" step="any"></td>
+                </tr>
+                <tr>
+                    <td><label>Плотность нашивки</label></td>
+                    <td><input name="stitch_dens" type="number" step="any"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="submit-cell">
+                        <input type="submit" value="Рассчитать" style="padding: 10px 20px;">
+                    </td>
+                </tr>
+            </table>
+            {% if message %}
+            <div style="margin-left: 265px; margin-top: 20px; font-weight: bold; color: #2c3e50;">
+                {{ message }}
+            </div>
+            {% endif %}
+        </form>
+    </body>
+</html>
