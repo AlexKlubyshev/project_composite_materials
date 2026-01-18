@@ -35,7 +35,7 @@ Python, Pandas, NumPy, Scikit-learn, GradientBoosting, PolynomialFeatures, PCA, 
 
 ## Установка и запуск
 ### 1. Клонирование репозитория
-git clone https://github.com/AlexKlubyshev/project_composite_materials.git
+git clone https://github.com/AlexKlubyshev/project_composite_materials.git<br>
 cd project_composite_materials
 
 ### 2. Создание окружения используя conda(рекомендуемый способ) 
@@ -52,7 +52,7 @@ tests/test_import.py
 jupyter notebook notebooks/composite_materials.ipynb
 
 ### 6. Flask-приложения
-cd src
+cd src<br>
 python app.py
 
 ## Зависимости
